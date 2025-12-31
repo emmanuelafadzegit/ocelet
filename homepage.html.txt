@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocelet | Simple & Reliable Video Conferencing</title>
+    <meta name="description" content="Ocelet makes virtual meetings easy. Host unlimited meetings with powerful collaboration tools.">
+
+    <link rel="stylesheet" href="page.css">
+    <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <nav class="navbar container">
+            <div class="logo">
+                <a href="/">OCELET</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="nav-auth">
+                <a href="#" class="btn-secondary">Contact Sales</a>
+                <a href="#" class="btn-primary">Sign Up Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Reliable Video Conferencing for Everyone</h1>
+                <p>Host unlimited meetings with up to 100 participants. Ocelet offers easy-to-use tools for collaboration, learning, and productivity.</p>
+                <div class="cta-group">
+                    <a href="#" class="btn-primary-large">Get Started Free</a>
+                    <a href="#" class="btn-outline">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="hero-image.png" alt="Video conference illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Powerful Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>HD Video & Audio</h3>
+                    <p>Crystal-clear video and audio for all meetings, keeping everyone connected.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Screen Sharing</h3>
+                    <p>Easily share your screen or presentations with your team or students.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Collaboration Tools</h3>
+                    <p>Chat, whiteboards, and notes help your team work together efficiently.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Security & Privacy</h3>
+                    <p>End-to-end encryption ensures your meetings stay private and secure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS SECTION -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2>Solutions for Every Team</h2>
+            <p>Whether you are a small business, educator, or enterprise, Ocelet has tools to suit your needs.</p>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>Business Teams</h3>
+                    <p>Improve productivity with seamless collaboration and reliable conferencing.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Educators</h3>
+                    <p>Conduct online classes with high-quality video and interactive tools.</p>
+                </div>
+                <div class="solution-card">
+                    <h3>Enterprises</h3>
+                    <p>Scale your meetings securely with advanced analytics and administration features.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Plans & Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <p>$0 / month</p>
+                    <ul>
+                        <li>Up to 100 participants</li>
+                        <li>Unlimited meetings</li>
+                        <li>Basic collaboration tools</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Pro</h3>
+                    <p>$15 / month</p>
+                    <ul>
+                        <li>Up to 500 participants</li>
+                        <li>Advanced collaboration tools</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <p>Custom pricing</p>
+                    <ul>
+                        <li>Unlimited participants</li>
+                        <li>Advanced security & analytics</li>
+                        <li>Dedicated support</li>
+                    </ul>
+                    <a href="#" class="btn-primary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Ocelet Communications, Inc. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>
