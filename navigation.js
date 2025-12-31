@@ -7,8 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     signUpButtons.forEach(button => {
         button.addEventListener("click", (e) => {
             e.preventDefault(); // prevent default link behavior
-            window.location.href = "signup.html"; // redirect to signup page
+            window.location.href = "login.html"; // redirect to signup page
         });
     });
 
 });
+
