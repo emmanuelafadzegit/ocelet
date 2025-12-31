@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Meeting Dashboard</title>
+  <link rel="stylesheet" href="newdashboard.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo">Ocelet</h2>
+    <nav>
+      <a class="active">Dashboard</a>
+      <a>Meetings</a>
+      <a>Contacts</a>
+      <a>Settings</a>
+      <a class="logout">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+    
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div>
+        <h1>Welcome back 👋</h1>
+        <p class="time">Monday · 10:45 AM</p>
+      </div>
+      <div class="profile">
+        <img src="https://i.pravatar.cc/40" alt="user">
+        <span>Emmanuel</span>
+      </div>
+    </header>
+
+    <!-- Action Cards -->
+    <section class="actions">
+      <div class="card start">
+        <h3>Start Meeting</h3>
+        <p>Host a new meeting now</p>
+        <button>Start</button>
+      </div>
+
+      <div class="card join">
+        <h3>Join Meeting</h3>
+        <p>Enter a meeting code</p>
+        <input type="text" placeholder="Meeting ID">
+        <button>Join</button>
+      </div>
+
+      <div class="card schedule">
+        <h3>Schedule</h3>
+        <p>Plan a meeting later</p>
+        <button>Schedule</button>
+      </div>
+    </section>
+
+    <!-- Upcoming Meetings -->
+    <section class="meetings">
+      <h2>Upcoming Meetings</h2>
+
+      <div class="meeting-item">
+        <div>
+          <h4>Team Standup</h4>
+          <span>11:30 AM · Today</span>
+        </div>
+        <button>Join</button>
+      </div>
+
+      <div class="meeting-item">
+        <div>
+          <h4>Client Presentation</h4>
+          <span>3:00 PM · Today</span>
+        </div>
+        <button>Join</button>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
