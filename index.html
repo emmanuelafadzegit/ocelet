@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ocelet | Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Brand / Logo -->
+  <div class="brand">
+    <span class="logo">Ocelet</span>
+  </div>
+
+  <!-- Main Container -->
   <div class="container" id="container">
 
-    <!-- Login Form -->
+    <!-- LOGIN FORM -->
     <div class="form-box login">
       <h2>Sign In</h2>
       <input type="email" placeholder="Email">
@@ -19,7 +25,7 @@
       <p>Don’t have an account? <span class="toggle" id="goSignup">Sign up</span></p>
     </div>
 
-    <!-- Signup Form -->
+    <!-- SIGNUP FORM -->
     <div class="form-box signup">
       <h2>Create Account</h2>
       <input type="text" placeholder="Full Name">
@@ -29,7 +35,7 @@
       <p>Already have an account? <span class="toggle" id="goLogin">Sign in</span></p>
     </div>
 
-    <!-- Sliding Panel (side content) -->
+    <!-- SLIDING PANEL -->
     <div class="panel">
       <h1>Welcome to Ocelet</h1>
       <p>Secure, elegant, and focused communication. Built for clarity and presence.</p>
@@ -37,6 +43,7 @@
 
   </div>
 
+  <!-- JavaScript for sliding effect -->
   <script>
     const container = document.getElementById("container");
     document.getElementById("goSignup").addEventListener("click", () => {
@@ -49,4 +56,3 @@
 
 </body>
 </html>
-
