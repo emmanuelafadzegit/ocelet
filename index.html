@@ -2,73 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ocelet | Login</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header class="brand">
-  <span class="logo">Ocelet</span>
-</header>
+  <div class="container" id="container">
 
-<div class="container" id="container">
+    <!-- Login Form -->
+    <div class="form-box login">
+      <h2>Sign In</h2>
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Login</button>
+      <p>Don’t have an account? <span class="toggle" id="goSignup">Sign up</span></p>
+    </div>
 
-  <!-- LOGIN -->
-  <div class="form-box login">
-    <h2>Sign In</h2>
+    <!-- Signup Form -->
+    <div class="form-box signup">
+      <h2>Create Account</h2>
+      <input type="text" placeholder="Full Name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+      <button>Sign up</button>
+      <p>Already have an account? <span class="toggle" id="goLogin">Sign in</span></p>
+    </div>
 
-    <input type="text" id="login-username" placeholder="Username" />
-    <input type="password" id="login-password" placeholder="Password" />
+    <!-- Sliding Panel (side content) -->
+    <div class="panel">
+      <h1>Welcome to Ocelet</h1>
+      <p>Secure, elegant, and focused communication. Built for clarity and presence.</p>
+    </div>
 
-    <button id="login-btn">Login</button>
-
-    <p>
-      Don’t have an account?
-      <span class="toggle" onclick="toggleForm()">Sign up</span>
-    </p>
   </div>
 
-  <!-- SIGN UP -->
-  <div class="form-box signup">
-    <h2>Create Account</h2>
-
-    <input type="text" id="signup-name" placeholder="Full Name" />
-    <input type="email" id="signup-email" placeholder="Email Address" />
-    <input type="text" id="signup-username" placeholder="Username" />
-    <input type="password" id="signup-password" placeholder="Password" />
-    <input type="password" id="signup-confirm" placeholder="Confirm Password" />
-
-    <button id="signup-btn">Create Account</button>
-
-    <p>
-      Already have an account?
-      <span class="toggle" onclick="toggleForm()">Sign in</span>
-    </p>
-  </div>
-
-  <!-- SLIDING PANEL -->
-  <div class="panel">
-    <h1>Welcome to Ocelet</h1>
-    <p>
-      Secure, elegant, and focused communication.<br>
-      Built for clarity and presence.
-    </p>
-  </div>
-
-</div>
-
-<script>
-  // UI toggle only (no authentication logic)
-  function toggleForm() {
-    document.getElementById("container").classList.toggle("active");
-  }
-
-  // Backend integration will be added here later
-  // Example:
-  // login-btn → POST /auth/login
-  // signup-btn → POST /auth/register
-</script>
+  <script>
+    const container = document.getElementById("container");
+    document.getElementById("goSignup").addEventListener("click", () => {
+      container.classList.add("active");
+    });
+    document.getElementById("goLogin").addEventListener("click", () => {
+      container.classList.remove("active");
+    });
+  </script>
 
 </body>
 </html>
+
