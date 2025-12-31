@@ -1,4 +1,3 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,56 +5,53 @@
   font-family: Inter, system-ui, sans-serif;
 }
 
-/* BODY */
 body {
-  min-height: 100vh;
+  height: 100vh;
+  background: linear-gradient(135deg, #05070d, #0b132b);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #05070d, #0b132b);
   color: #fff;
-  padding: 20px;
 }
 
-/* CONTAINER */
+/* Brand */
+.brand {
+  position: absolute;
+  top: 24px;
+  left: 32px;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #4da3ff;
+}
+
+
+
+
+/* Container */
 .container {
-  position: relative;
   width: 920px;
-  max-width: 100%;
   height: 520px;
-  background: rgba(10,15,30,0.85);
+  background: rgba(10,15,30,.85);
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0,0,0,.6);
 }
 
-/* FORMS */
+/* Forms */
 .form-box {
   position: absolute;
-  top: 0;
   width: 50%;
   height: 100%;
   padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: all .8s ease;
 }
 
-/* LOGIN */
-.login {
-  left: 0;
-  z-index: 2;
-}
-
-/* SIGNUP */
-.signup {
-  left: 0;
-  opacity: 0;
-  z-index: 1;
-}
-
-/* FORM ELEMENTS */
 .form-box h2 {
   margin-bottom: 25px;
 }
@@ -91,21 +87,43 @@ body {
   font-weight: 500;
 }
 
-/* PANEL */
+/* Login position */
+.login {
+  left: 0;
+  z-index: 2;
+}
+
+/* Signup position (hidden initially) */
+.signup {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+/* Sliding Panel */
 .panel {
   position: absolute;
   right: 0;
   width: 50%;
   height: 100%;
-  padding: 60px;
   background: linear-gradient(135deg,#2563eb,#0f172a);
+  padding: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   transition: transform .8s ease;
 }
 
-/* ACTIVE STATES */
+.panel h1 {
+  font-size: 2.3rem;
+}
+.panel p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #e0e7ff;
+}
+
+/* === ACTIVE STATE (SWOOP) === */
 .container.active .login {
   transform: translateX(100%);
   opacity: 0;
@@ -121,25 +139,5 @@ body {
   transform: translateX(-100%);
 }
 
-/* RESPONSIVE */
-@media(max-width: 900px) {
-  .container {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-  }
-  .form-box, .panel {
-    position: relative;
-    width: 100%;
-    padding: 40px 20px;
-    transform: none !important;
-  }
-  .container.active .login,
-  .container.active .signup {
-    opacity: 1;
-    transform: none;
-  }
-  .panel {
-    margin-top: 20px;
-  }
-}
+
+
