@@ -1,15 +1,19 @@
-// Wait until the page is fully loaded
+// navigation.js
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Select all buttons that should go to signup page
+    // Correct file path for your signup/login page
+    function getSignupURL() {
+        return "login.html"; // change to your actual file name
+    }
+
     const signUpButtons = document.querySelectorAll(".btn-primary, .btn-primary-large");
 
     signUpButtons.forEach(button => {
         button.addEventListener("click", (e) => {
-            e.preventDefault(); // prevent default link behavior
-            window.location.href = "login.html"; // redirect to signup page
+            e.preventDefault();
+            window.location.href = getSignupURL();
         });
     });
 
 });
-
