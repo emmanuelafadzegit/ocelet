@@ -7,27 +7,31 @@ if (loginForm) {
   loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    console.log("Login submitted");
-
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
 
-    console.log("Email:", email);
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    });
+      if (error) {
+        alert("Login failed: " + error.message);
+        return;
+      }
 
-    console.log("Login response:", data, error);
+      if (!data.session) {
+        alert("Login blocked. Check email confirmation or site URL.");
+        return;
+      }
 
-    if (error) {
-      alert(error.message);
-      return;
+      window.location.href = "newdashboard.html";
+
+    } catch (err) {
+      alert("Unexpected error. Check console.");
+      console.error(err);
     }
-
-    alert("Login success");
-    window.location.href = "newdashboard.html";
   });
 }
 
@@ -38,8 +42,7 @@ if (signupForm) {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    console.log("Signup submitted");
-
+    const email = document.getElementById("signupEmail").value;
     const password = document.getElementById("signupPassword").value;
     const confirm = document.getElementById("confirmPassword").value;
 
@@ -48,21 +51,18 @@ if (signupForm) {
       return;
     }
 
-    const email = document.getElementById("signupEmail").value;
-
-    const { data, error } = await supabase.auth.signUp({
+    const { error } = await supabase.auth.signUp({
       email,
       password,
     });
 
-    console.log("Signup response:", data, error);
-
     if (error) {
-      alert(error.message);
+      alert("Signup failed: " + error.message);
       return;
     }
 
-    alert("Signup successful. Check your email.");
+    alert("Signup successful. You can now log in.");
   });
 }
+
 
