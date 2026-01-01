@@ -27,7 +27,7 @@ if (loginForm) {
     }
 
     alert("Login success");
-    window.location.href = "dashboard.html";
+    window.location.href = "newdashboard.html";
   });
 }
 
@@ -65,3 +65,4 @@ if (signupForm) {
     alert("Signup successful. Check your email.");
   });
 }
+
