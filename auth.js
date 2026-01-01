@@ -1,6 +1,3 @@
-console.log("auth.js loaded");
-
-/* LOGIN */
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -16,16 +13,21 @@ if (loginForm) {
         password,
       });
 
+      console.log("Supabase login response:", { data, error });
+
       if (error) {
         alert("Login failed: " + error.message);
         return;
       }
 
       if (!data.session) {
-        alert("Login blocked. Check email confirmation or site URL.");
+        alert(
+          "Login blocked: likely GitHub Pages URL not whitelisted or email not confirmed."
+        );
         return;
       }
 
+      alert("Login success!");
       window.location.href = "newdashboard.html";
 
     } catch (err) {
@@ -34,35 +36,3 @@ if (loginForm) {
     }
   });
 }
-
-/* SIGN UP */
-const signupForm = document.getElementById("signupForm");
-
-if (signupForm) {
-  signupForm.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const email = document.getElementById("signupEmail").value;
-    const password = document.getElementById("signupPassword").value;
-    const confirm = document.getElementById("confirmPassword").value;
-
-    if (password !== confirm) {
-      alert("Passwords do not match");
-      return;
-    }
-
-    const { error } = await supabase.auth.signUp({
-      email,
-      password,
-    });
-
-    if (error) {
-      alert("Signup failed: " + error.message);
-      return;
-    }
-
-    alert("Signup successful. You can now log in.");
-  });
-}
-
-
