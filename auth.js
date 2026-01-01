@@ -1,3 +1,4 @@
+console.log("auth.js loaded");
 const loginForm = document.getElementById("loginForm");
 
 if (loginForm) {
@@ -20,3 +21,4 @@ if (loginForm) {
     window.location.href = "dashboard.html";
   });
 }
+
